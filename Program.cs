@@ -27,7 +27,7 @@ namespace FH4RP
 
             Networking.DiscordRPC.Initialize();
 
-            var timer = new Timer(500);
+            var timer = new Timer(1250);
             timer.Elapsed += (sender, a) => { Networking.DiscordRPC.SetPresence(Server.LastUpdate); };
             timer.Start();
 
