@@ -76,7 +76,7 @@ namespace FH4RP.Helpers
 
         private VehicleDBEntry GetVehicleEntry(int vehicleId)
         {
-            return JsonConvert.DeserializeObject<VehicleDBEntry>(HttpGet("https://forzadb.local/api/vehicles/" + vehicleId));
+            return JsonConvert.DeserializeObject<VehicleDBEntry>(HttpGet("https://forzadb.dgtl.dev/api/vehicles/" + vehicleId));
         }
     }
 }

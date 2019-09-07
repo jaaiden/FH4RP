@@ -43,3 +43,5 @@ If you would like to contribute to this project, feel free to send PRs with upda
 ## References
 
 This project could not have been possible without the Turn 10 community and [Lachee's Discord RPC](https://github.com/Lachee/discord-rpc-csharp) package.
+
+Forza logo from [Forza Horizon 4 Icon Pack - Windows 10 by tfphoenix](https://www.deviantart.com/tfphoenix/art/Forza-Horizon-4-Icon-Pack-Windows-10-767768186) on DeviantArt.
