@@ -17,7 +17,7 @@ namespace FH4RP.Networking
             discordClient = new DiscordRpcClient("619736536333811722");
             discordClient.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
             discordClient.OnReady += (sender, e) => { Console.WriteLine($"[Discord] Received ready from {e.User.Username}!"); };
-            discordClient.OnPresenceUpdate += (sender, e) => { Console.WriteLine("[Discord] Received presence update!"); };
+            discordClient.OnPresenceUpdate += (sender, e) => { /*Console.WriteLine("[Discord] Received presence update!");*/ };
             discordClient.Initialize();
         }
 

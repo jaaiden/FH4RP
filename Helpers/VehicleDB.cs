@@ -50,9 +50,9 @@ namespace FH4RP.Helpers
             v.Year = entry.year;
             v.Make = entry.make;
             v.Model = entry.model;
-#if DEBUG
-            Console.WriteLine($"[{v.ID}] {v.GetVehicleInfo()}");
-#endif
+
+            string carInfo = $"[{vehicleId}] {v.GetVehicleInfo()}";
+            Logger.Log(carInfo + (v.Make == "Unknown" ? "\n\nThis vehicle does not exist in the database!\nPlease consider adding it by going to https://forzadb.dgtl.dev!" : ""));
             return v;
         }
 
@@ -70,7 +70,7 @@ namespace FH4RP.Helpers
                     retStr = reader.ReadToEnd();
                 }
             }
-            catch (Exception e) { Console.WriteLine($"[API] Exception: {e.ToString()}"); }
+            catch (Exception e) { Logger.Log($"[API] Exception: {e.ToString()}"); }
             return retStr;
         }
 

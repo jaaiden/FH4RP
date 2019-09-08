@@ -38,7 +38,7 @@ namespace FH4RP.Networking
             TelemetryData telemetryData = CreateDataStruct(data);
             if (telemetryData.CarOrdinal != 0) LastUpdate = telemetryData;
 #if DEBUG
-            System.IO.File.WriteAllText("output.json", Newtonsoft.Json.JsonConvert.SerializeObject(LastUpdate, Newtonsoft.Json.Formatting.Indented));
+            // System.IO.File.WriteAllText("output.json", Newtonsoft.Json.JsonConvert.SerializeObject(LastUpdate, Newtonsoft.Json.Formatting.Indented));
 #endif
             udpClient.BeginReceive(new AsyncCallback(OnUdpReceive), null);
         }
