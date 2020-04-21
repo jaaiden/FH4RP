@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Timers;
+using FH4RP.DataStructs;
 using FH4RP.Helpers;
 using FH4RP.Networking;
 
@@ -7,7 +8,7 @@ namespace FH4RP
 {
     class Program
     {
-        private static int ServerPort = 9909;
+        public static AppConfig Config { get; private set; }
         public static TelemetryServer Server { get; private set; }
 
         static void Main(string[] args)
@@ -22,7 +23,12 @@ namespace FH4RP
             Console.WriteLine();
             Console.WriteLine("> CheckNetIsolation.exe LoopbackExempt -a -n=Microsoft.SunriseBaseGame_8wekyb3d8bbwe");
             Console.WriteLine();
-            Server = new TelemetryServer(ServerPort);
+
+            Console.WriteLine("Loading configuration file...");
+            Config = AppConfig.Load();
+            Console.WriteLine("Done.");
+
+            Server = new TelemetryServer(Config.ServerPort);
             Server.Start();
 
             Networking.DiscordRPC.Initialize();

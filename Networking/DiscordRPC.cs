@@ -26,7 +26,7 @@ namespace FH4RP.Networking
             discordClient.SetPresence(new RichPresence()
             {
                 Details = VehicleDB.Instance.GetVehicle(data.CarOrdinal).GetVehicleInfo(),
-                State = $"[{data.CarClass.ToString()} | {data.CarPI}] - {data.GetMPH()} mph",
+                State = $"[{data.CarClass.ToString()} | {data.CarPI}] - {data.GetSpeed()}",
                 Assets = new Assets()
                 {
                     LargeImageKey = "fm"

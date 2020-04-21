@@ -340,9 +340,21 @@ namespace FH4RP.DataStructs
         public sbyte NormalizedDrivingLine { get; set; }
         public sbyte NormalizedAIBrakeDifference { get; set; }
 
-        public int GetMPH()
+        private int GetKPH()
+        {
+            return (int)(VelocityZ * 3.6f);
+        }
+
+        private int GetMPH()
         {
             return (int)(VelocityZ * 2.23694f);
+        }
+
+        public string GetSpeed()
+        {
+            return Program.Config.UseKMH
+                ? $"{GetKPH()} kph"
+                : $"{GetMPH()} mph";
         }
     }
 }
