@@ -8,6 +8,10 @@ This program will allow you to display [Discord Rich Presence](https://discordap
 
 Forza Horizon 4 has the ability to send car telemetry data out to a server. This is commonly used for racing simulation devices such as dashboards and hydraulic-powered racing seats. This program uses the same telemetry data to show car information in Discord.
 
+## Can I use this for Forza Horizon 5?
+
+Technically yes, but I recommend using my [other project for it](https://github.com/jaiden-d/FH5RP) as I have some other future plans for it.
+
 ## Running the program
 
 ---
